@@ -1,6 +1,5 @@
 # @param {Integer} x
 # @return {Integer}
-# min = (max * -1) - 1
 def reverse(x)
   max = 0xffffffff >> 1
   neg = 1
@@ -38,7 +37,7 @@ end
 # Then check if reversed value == max value (w/o last digit)
 # Check if last digit of reversed is greater than last digit of max value
 # If so, return zero. Otherwise, return reversed
-# It rounds down.. towards the next negative
+# It rounds down.. towards the next negative. A fmod would be useful here...
 def reverse(x)
   max = 0xffffffff >> 1
   max_last_digit = max % 10
@@ -59,4 +58,22 @@ def reverse(x)
   return 0 if reverse == max_minus_digit && digit > max_last_digit
 
   ((reverse * 10) + digit) * neg
+end
+
+## Can utilize #abs OR check if reverse is less than the min
+# min = (max * -1) - 1
+def reverse(x)
+  max = 0xffffffff >> 1
+  max_last_digit = max % 10
+  max_minus_digit = max / 10
+  reverse = 0
+  until x.zero?
+    digit = x.remainder(10)
+    if reverse.abs > max_minus_digit || (reverse.abs == max_minus_digit && digit > max_last_digit)
+      return 0
+    end
+    reverse = (reverse * 10) + digit
+    x = (x / 10.0).to_i
+  end
+  reverse
 end
