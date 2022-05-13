@@ -2,6 +2,7 @@
 # @return {Integer}
 # -1 == haven't read
 # -2 == earlier point has read
+# This solution is 272 ms compared to the 2nd solution's 1240 ms
 def longest_consecutive(nums)
   return 0 if nums.empty?
 
