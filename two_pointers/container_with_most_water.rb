@@ -25,7 +25,7 @@ def max_area(height)
     if height[idx_start] > height[idx_end]
       idx_end -= 1
     else
-        idx_start += 1
+      idx_start += 1
     end
   end
   max_water
@@ -33,3 +33,5 @@ end
 
 height = [1,8,6,2,5,4,8,3,7]
 puts max_area(height)
+# Since the container is bounded by the lesser length
+# Heuristically looking for a bigger length won't miss any probabilities
