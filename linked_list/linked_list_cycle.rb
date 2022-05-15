@@ -22,3 +22,21 @@ def hasCycle(head)
   end
   false
 end
+
+# Neetcode: Tortoise and Hare solution
+def hasCycle(head)
+  return false if head.nil?
+  return false if head.next.nil?
+
+  fast = head
+  while head && fast
+    fast = fast.next
+    return false if fast.nil?
+
+    fast = fast.next
+    head = head.next
+    
+    return true if head == fast
+  end
+  false
+end
