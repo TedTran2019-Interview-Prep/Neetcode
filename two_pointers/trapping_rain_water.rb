@@ -3,7 +3,7 @@
 # min(L, R) - h[i]
 # 0 is the minimum, obviously
 # maxLeft
-# maxRightd
+# maxRight
 def trap(height)
   max_left = []
   max_right = []
