@@ -26,12 +26,12 @@ end
 def reverse_list(head)
   return head if head.nil?
 
-  newHead = head
+  new_head = head
   if head.next
-    newHead = reverse_list(head.next)
+    new_head = reverse_list(head.next)
     head.next.next = head
   end
 
   head.next = nil
-  return newHead
+  new_head
 end
