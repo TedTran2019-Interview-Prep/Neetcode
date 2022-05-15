@@ -1,0 +1,24 @@
+# Definition for singly-linked list.
+# class ListNode
+#     attr_accessor :val, :next
+#     def initialize(val)
+#         @val = val
+#         @next = nil
+#     end
+# end
+
+# @param {ListNode} head
+# @return {Boolean}
+def hasCycle(head)
+  return false if head.nil?
+  return false if head.next.nil?
+  
+  dict = {}
+  while head
+    return true if dict.key?(head)
+    
+    dict[head] = true 
+    head = head.next
+  end
+  false
+end
