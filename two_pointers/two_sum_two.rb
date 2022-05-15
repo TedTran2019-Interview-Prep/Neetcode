@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # @param {Integer[]} numbers
 # @param {Integer} target
 # @return {Integer[]}
@@ -18,14 +20,14 @@ def two_sum(numbers, target)
   nil
 end
 
-numbers = [2,7,11,15]
+numbers = [2, 7, 11, 15]
 target = 9
 print two_sum(numbers, target)
 
-numbers = [2,3,4]
+numbers = [2, 3, 4]
 target = 6
 print two_sum(numbers, target)
 
-numbers = [-1,0]
+numbers = [-1, 0]
 target = -1
 print two_sum(numbers, target)

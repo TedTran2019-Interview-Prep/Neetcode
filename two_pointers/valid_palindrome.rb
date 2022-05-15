@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # @param {String} s
 # @return {Boolean}
 def is_palindrome(s)
@@ -13,7 +15,7 @@ def is_palindrome(s)
   true
 end
 
-puts is_palindrome("A man, a plan, a canal: Panama")
+puts is_palindrome('A man, a plan, a canal: Panama')
 puts is_palindrome('ab_a')
 
 def is_palindrome(s)
@@ -34,7 +36,7 @@ def is_palindrome(s)
   true
 end
 
-puts is_palindrome("A man, a plan, a canal: Panama")
+puts is_palindrome('A man, a plan, a canal: Panama')
 puts is_palindrome('ab_a')
 
 # Don't have to join into a string again to reverse and compare

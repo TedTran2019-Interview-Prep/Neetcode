@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # @param {Integer} a
 # @param {Integer} b
 # @return {Integer}
@@ -12,19 +14,19 @@ def get_sum(a, b)
     if (bit_a | bit_b).zero?
       if carry == 1
         carry -= 1
-        res = res | (1 << n)
+        res |= (1 << n)
       end
     elsif (bit_a & bit_b) == 1
       if carry == 1
-        res = res | (1 << n)
-      else 
+        res |= (1 << n)
+      else
         carry += 1
       end
-    elsif carry == 0
-      res = res | (1 << n)
+    elsif carry.zero?
+      res |= (1 << n)
     end
   end
-  res = res & mask
+  res &= mask
   if (res >> 31) & 1 == 1
     # XOR flips rightmost 32, then NOT flips all bits
     res = ~(res ^ mask)
@@ -65,9 +67,7 @@ def get_sum(a, b)
     a = (a ^ b) & mask # addition w/o carries
     b = tmp & mask
   end
-  if a > (mask >> 1)
-    a = ~(a ^ mask)
-  end
+  a = ~(a ^ mask) if a > (mask >> 1)
   a
 end
 

@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # @param {Integer[]} height
 # @return {Integer}
 # min(L, R) - h[i]
@@ -54,10 +56,10 @@ def trap(height)
   max_water
 end
 
-height = [0,1,0,2,1,0,1,3,2,1,2,1]
-height2 = [4,2,0,3,2,5]
-height3 = [4,2,3]
-height4 = [5,4,1,2]
+height = [0, 1, 0, 2, 1, 0, 1, 3, 2, 1, 2, 1]
+height2 = [4, 2, 0, 3, 2, 5]
+height3 = [4, 2, 3]
+height4 = [5, 4, 1, 2]
 
 puts trap(height)
 puts trap(height2)

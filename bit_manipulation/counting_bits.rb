@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # @param {Integer} n
 # @return {Integer[]}
 def count_bits(n)
@@ -40,11 +42,11 @@ def count_bits(n)
   bits = []
   offset = 2
   (n + 1).times do |nbr|
-    if nbr <= 2 || nbr == (offset * 2)
-      bits << count_bit(nbr)
-    else
-      bits << (bits[offset] + bits[nbr - offset])
-    end
+    bits << if nbr <= 2 || nbr == (offset * 2)
+              count_bit(nbr)
+            else
+              (bits[offset] + bits[nbr - offset])
+            end
 
     offset *= 2 if nbr == offset * 2
   end

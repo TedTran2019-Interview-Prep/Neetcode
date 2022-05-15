@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # @param {Integer[]} nums
 # @return {Integer[]}
 # answer[i] = rest of elements multiplied together, except self

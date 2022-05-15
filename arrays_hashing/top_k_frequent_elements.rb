@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # @param {Integer[]} nums
 # @param {Integer} k
 # @return {Integer[]}
@@ -29,8 +31,8 @@ end
 def top_k_frequent(nums, k)
   hash = Hash.new(0)
   max_freq = 0
-  nums.each do |num| 
-    hash[num] += 1 
+  nums.each do |num|
+    hash[num] += 1
     max_freq = hash[num] if hash[num] > max_freq
   end
   counts = Array.new(max_freq + 1) { [] }

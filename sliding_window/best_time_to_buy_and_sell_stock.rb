@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # @param {Integer[]} prices
 # @return {Integer}
 # Time limit exceeded, brute force
@@ -36,7 +38,7 @@ def max_profit(prices)
   max_profit
 end
 
-print max_profit([7,1,5,3,6,4])
+print max_profit([7, 1, 5, 3, 6, 4])
 
 # Compare lowest value found so far w/ every value that comes after
 def max_profit(prices)

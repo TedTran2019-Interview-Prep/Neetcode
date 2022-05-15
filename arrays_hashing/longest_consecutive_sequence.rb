@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # @param {Integer[]} nums
 # @return {Integer}
 # -1 == haven't read
@@ -10,9 +12,9 @@ def longest_consecutive(nums)
   nums.each { |num| hash[num] = -1 }
   nums.each do |num|
     next unless hash[num] == -1
-    
+
     longest_consec = 1
-    while true
+    loop do
       val = hash[num + longest_consec]
       case val
       when -1
@@ -29,12 +31,12 @@ def longest_consecutive(nums)
     end
   end
 
-  hash.max_by { |k, v| v}[1]
+  hash.max_by { |_k, v| v }[1]
 end
 
-nums = [100,4,200,1,3,2]
+nums = [100, 4, 200, 1, 3, 2]
 puts longest_consecutive(nums)
-nums = [0,3,7,2,5,8,4,6,0,1]
+nums = [0, 3, 7, 2, 5, 8, 4, 6, 0, 1]
 puts longest_consecutive(nums)
 
 # Neetcode's solution is a lot better
@@ -48,10 +50,10 @@ def longest_consecutive(nums)
   nums.each { |num| hash[num] = true }
   longest = 0
   nums.each do |num|
-    next if hash[num - 1] 
+    next if hash[num - 1]
 
     challenger = 1
-    while true
+    loop do
       if hash[num + challenger]
         challenger += 1
       else

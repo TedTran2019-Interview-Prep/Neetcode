@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # @param {Integer[]} nums
 # @return {Integer}
 def single_number(nums)

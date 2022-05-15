@@ -1,9 +1,11 @@
+# frozen_string_literal: true
+
 # @param {Integer} x
 # @return {Integer}
 def reverse(x)
   max = 0xffffffff >> 1
   neg = 1
-  if x < 0
+  if x.negative?
     neg *= -1
     x *= -1
   end
@@ -20,7 +22,7 @@ end
 def simple_reverse(x)
   reverse = 0
   neg = 1
-  if x < 0
+  if x.negative?
     neg *= -1
     x *= -1
   end
@@ -69,9 +71,8 @@ def reverse(x)
   reverse = 0
   until x.zero?
     digit = x.remainder(10)
-    if reverse.abs > max_minus_digit || (reverse.abs == max_minus_digit && digit > max_last_digit)
-      return 0
-    end
+    return 0 if reverse.abs > max_minus_digit || (reverse.abs == max_minus_digit && digit > max_last_digit)
+
     reverse = (reverse * 10) + digit
     x = (x / 10.0).to_i
   end

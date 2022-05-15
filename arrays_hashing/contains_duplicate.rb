@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # @param {Integer[]} nums
 # @return {Boolean}
 # Can also be done by converting to a set and comparing lengths

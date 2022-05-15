@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # @param {Integer[]} height
 # @return {Integer}
 # Brute force fails due to time limit exceeded
@@ -18,7 +20,7 @@ def max_area(height)
   idx_end = height.length - 1
   max_water = 0
   while idx_start < idx_end
-    challenger = (height[idx_start] > height[idx_end] ? height[idx_end] : height[idx_start]) 
+    challenger = (height[idx_start] > height[idx_end] ? height[idx_end] : height[idx_start])
     challenger *= (idx_end - idx_start)
     max_water = challenger if challenger > max_water
 
@@ -31,7 +33,7 @@ def max_area(height)
   max_water
 end
 
-height = [1,8,6,2,5,4,8,3,7]
+height = [1, 8, 6, 2, 5, 4, 8, 3, 7]
 puts max_area(height)
 # Since the container is bounded by the lesser length
 # Heuristically looking for a bigger length won't miss any probabilities

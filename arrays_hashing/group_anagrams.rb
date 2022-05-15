@@ -1,6 +1,8 @@
+# frozen_string_literal: true
+
 # @param {String[]} strs
 # @return {String[][]}
-# Sort and store? nlogn * n 
+# Sort and store? nlogn * n
 # Could use hashmap as a key, then convert to array after
 def group_anagrams(strs)
   anagrams = Hash.new { |h, k| h[k] = [] }
