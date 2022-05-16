@@ -1,14 +1,16 @@
+# frozen_string_literal: true
+
 # Naive exceeds time limit
 class KthLargest
-    def initialize(k, nums)
-      @array = nums.sort { |a, b| b <=> a }
-      @k = k
-    end
+  def initialize(k, nums)
+    @array = nums.sort { |a, b| b <=> a }
+    @k = k
+  end
 
-    def add(val)
-     slide(val)
-     @array[@k - 1]
-    end
+  def add(val)
+    slide(val)
+    @array[@k - 1]
+  end
 
   private
 
@@ -19,7 +21,7 @@ class KthLargest
     end
 
     @array.each_with_index do |el, idx|
-      if val > el 
+      if val > el
         @array.insert(idx, val)
         return
       end
@@ -36,23 +38,19 @@ class KthLargest
     @k = k
     @heap = Heap.new
     nums.each { |num| @heap << num }
-    until @heap.size <= @k
-      @heap.pop
-    end
+    @heap.pop until @heap.size <= @k
   end
 
   def add(val)
     @heap << val
-    until @heap.size <= @k
-      @heap.pop
-    end
+    @heap.pop until @heap.size <= @k
     @heap.peak
   end
 end
 
-kthLargest = KthLargest.new(3, [4, 5, 8, 2]);
-puts kthLargest.add(3);
-puts kthLargest.add(5); 
-puts kthLargest.add(10);
-puts kthLargest.add(9);
-puts kthLargest.add(4);
+kthLargest = KthLargest.new(3, [4, 5, 8, 2])
+puts kthLargest.add(3)
+puts kthLargest.add(5)
+puts kthLargest.add(10)
+puts kthLargest.add(9)
+puts kthLargest.add(4)

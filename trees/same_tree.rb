@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # Definition for a binary tree node.
 # class TreeNode
 #     attr_accessor :val, :left, :right
@@ -14,9 +16,9 @@ def is_same_tree(p, q)
   if p.nil? && q.nil?
     true
   elsif p && q
-    (p.val == q.val) && 
-    is_same_tree(p.left, q.left) &&
-    is_same_tree(p.right, q.right)
+    (p.val == q.val) &&
+      is_same_tree(p.left, q.left) &&
+      is_same_tree(p.right, q.right)
   else
     false
   end

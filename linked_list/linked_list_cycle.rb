@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # Definition for singly-linked list.
 # class ListNode
 #     attr_accessor :val, :next
@@ -12,12 +14,12 @@
 def hasCycle(head)
   return false if head.nil?
   return false if head.next.nil?
-  
+
   dict = {}
   while head
     return true if dict.key?(head)
-    
-    dict[head] = true 
+
+    dict[head] = true
     head = head.next
   end
   false
@@ -35,7 +37,7 @@ def hasCycle(head)
 
     fast = fast.next
     head = head.next
-    
+
     return true if head == fast
   end
   false
