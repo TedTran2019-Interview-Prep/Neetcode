@@ -128,5 +128,3 @@ end
 # 5 - 4 = 1 -> number of 1s
 # all permutations of 2 2 1 -> (3)
 # Okay all this is pointless, let's just code
-
-puts climb_stairs(5)
