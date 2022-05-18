@@ -2,8 +2,7 @@
 # @param {Integer} k
 # @return {Integer}
 # windowLength - count[letter], less than/equals K?
-# Move L forward if invalid until valid, else move R forward
-# Stop when end is reached and valid
+# Move L forward if invalid until valid, then move R forward
 def character_replacement(s, k)
   return 0 if s.length.zero?
   return 1 if s.length == 1
@@ -23,7 +22,7 @@ def character_replacement(s, k)
       dict[window.shift] -= 1
       left += 1
     end
-    max  = window.length if window.length > max
+    max = window.length if window.length > max
     right += 1
   end
   max
