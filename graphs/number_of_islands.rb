@@ -1,4 +1,4 @@
-# Initial solution thought: floodfill while memoizing, 2N
+# Initial solution thought: floodfill while keeping track of visited, 2N
 DIRS = [[0, 1], [0, -1], [1, 0], [-1, 0]].freeze
 
 def num_islands(grid)
