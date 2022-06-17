@@ -2,8 +2,8 @@
 Exercises taken from https://neetcode.io/
 
 ## Arrays and Hashing
-- []
-- [] 
+- [x]
+- [ ] 
 ## Two Pointers
 
 ## Sliding Window
