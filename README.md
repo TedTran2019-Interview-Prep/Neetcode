@@ -2,34 +2,33 @@
 Exercises taken from https://neetcode.io/
 
 ## Arrays and Hashing
-- Contains Duplicate:
-- Valid Anagram:
-- Two Sum:
-- Group Anagrams:
-- Top K Frequent Elements:
-- Product of Array Except Self:
-- Valid Sudoku:
-- Encode and Decode Strings:
-- Longest Consecutive Sequence:
+- Contains Duplicate: O(n)
+- Valid Anagram: O(n)
+- Two Sum: O(n)
+- Group Anagrams: O(n * m)
+- Top K Frequent Elements: O(n), bound by max # of occurrences
+- Product of Array Except Self: O(n), prefix suffix
+- Valid Sudoku: O(n)
+- Longest Consecutive Sequence: O(n), check if left neighbor exists
 
 ## Two Pointers
-- Valid Palindrome: 
-- Two Sum 2:
-- 3Sum:
-- Container with Most Water:
-- Trapping Rain Water:
+- Valid Palindrome: O(n)
+- Two Sum 2: O(n), bounding
+- 3Sum: O(nlogn), sort(to remove dups) then bound. num + L + R
+- Container with Most Water: O(n), bounding.
+- Trapping Rain Water: O(n), maxLeft, maxRight.
 
 ## Sliding Window
-- Best Time to Buy and Sell Stock:
-- Longest Substring Without Repeating Characters:
-- Longest Repeating Character Replacement: 
+- Best Time to Buy and Sell Stock: O(n), compare min w/ every other value
+- Longest Substring Without Repeating Characters: O(n), sliding window.
+- Longest Repeating Character Replacement: O(n), sliding window. 
 
 ## Stack
-- Valid Parentheses:
-- Min Stack:
+- Valid Parentheses: O(n)
+- Min Stack: Two stacks OR use tuples
 
 ## Binary Search
-- Binary Search: 
+- Binary Search: O(logn)
 
 ## Linked List
 - Reverse Linked List:
