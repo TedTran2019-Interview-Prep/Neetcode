@@ -73,7 +73,7 @@ Exercises taken from https://neetcode.io/
 - Number of 1 Bits: Converting to string, modulo to check odd/even + bitshifting, 
 utilizing &(n - 1)
 - Counting Bits: O(n). DP, most significant bit. 
-- Reverse Bits:
-- Missing Number:
-- Sum of Two Integers:
-- Reverse Integer:
+- Reverse Bits: O(1). Bit manipulation fundamentals put together.
+- Missing Number: O(n), can use Gauss summation
+- Sum of Two Integers: Carries, mask.
+- Reverse Integer: Reversing all but last digit and checking if safe.
