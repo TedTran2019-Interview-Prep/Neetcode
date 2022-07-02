@@ -43,7 +43,8 @@ def count_bits(n)
   offset = 2
   (n + 1).times do |nbr|
     bits << if nbr <= 2 || nbr == (offset * 2)
-              count_bit(nbr)
+              # count_bit(nbr)
+              nbr.zero? ? 0 : 1
             else
               (bits[offset] + bits[nbr - offset])
             end

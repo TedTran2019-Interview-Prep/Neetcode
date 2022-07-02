@@ -31,34 +31,34 @@ Exercises taken from https://neetcode.io/
 - Binary Search: O(logn)
 
 ## Linked List
-- Reverse Linked List:
-- Merge Two Linked Lists:
-- Linked List Cycle:
+- Reverse Linked List: O(n)
+- Merge Two Linked Lists: O(n)
+- Linked List Cycle: O(n), hashmap or Tortoise and Hare
 ## Trees
-- Invert Binary Tree:
-- Maximum Depth of a Binary Tree:
-- Diameter of a Binary Tree:
-- Balanced Binary Tree:
-- Same Tree:
-- Subtree of Another Tree:
-- Lowest Common Ancestor of a BST:
+- Invert Binary Tree: O(n)
+- Maximum Depth of a Binary Tree: O(n)
+- Diameter of a Binary Tree: O(n), store extra info
+- Balanced Binary Tree: O(n), store extra
+- Same Tree: O(n)
+- Subtree of Another Tree: O(n * m)
+- Lowest Common Ancestor of a BST: O(logn), Definition of BST
 
 ## Tries
 
 ## Heap / Priority Queue
-- Kth Largest Element in a Stream:
-- Last Stone Weight:
+- Kth Largest Element in a Stream: O(klogn), MinHeap. 
+- Last Stone Weight: MaxHeap
 
 ## Backtracking
 
 ## Graphs
-- Number of Islands:
+- Number of Islands: O(n), flood fill.
 
 ## Advanced Graphs
 
 ## 1D Dynamic Programming
-- Climbing Stairs:
-- Min Cost Climbing Stairs:
+- Climbing Stairs: O(n), DP.
+- Min Cost Climbing Stairs: O(n), bottom-up DP.
 
 ## 2D Dynamic Programming
 
@@ -69,9 +69,10 @@ Exercises taken from https://neetcode.io/
 ## Math and Geometry
 
 ## Bit Manipulation
-- Single Number:
-- Number of 1 Bits:
-- Counting Bits:
+- Single Number: O(n), xor. 
+- Number of 1 Bits: Converting to string, modulo to check odd/even + bitshifting, 
+utilizing &(n - 1)
+- Counting Bits: O(n). DP, most significant bit. 
 - Reverse Bits:
 - Missing Number:
 - Sum of Two Integers:
