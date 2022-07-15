@@ -17,12 +17,7 @@ class WordDictionary
     search_word(word, @root)
   end
 
-  def search_word(word, root)
-    return false if root.nil?
-    if word.empty?
-      return !!root['END']
-    end
-
+  def search_word(word, root)    
     curr = root
     word.each_char.with_index do |char, idx|
       if word[idx] != '.'
