@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 class Trie
   END_OF_WORD = 'END'
 
